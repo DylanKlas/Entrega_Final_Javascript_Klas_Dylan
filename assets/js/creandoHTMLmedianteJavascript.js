@@ -3,12 +3,14 @@
 let creandoHtml = () => {
   const index_contenedor = document.getElementById("contenedor");
   const getCharacters = async () => {
-    const response = await fetch("./data.json");
+    const response = await fetch(
+      "https://raw.githubusercontent.com/DylanKlas/Entrega_Final_Javascript_Klas_Dylan/main/assets/js/data.json"
+    );
     const cartelBienvenida = await response.json();
 
     let divv = document.createElement("div");
-    divv.innerHTML = `<h2>${cartelBienvenida[0]}</h2>`;
-    alert(cartelBienvenida[0]);
+    divv.innerHTML = `<h6> Bienvenido ${cartelBienvenida[0].nombre}</h6>`;
+    index_contenedor.append(divv);
   };
   getCharacters();
 
