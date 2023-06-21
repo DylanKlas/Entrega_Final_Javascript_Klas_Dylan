@@ -472,7 +472,7 @@ function cancelarCompra() {
 }
 
 function finalizarCompra() {
-  creandoObjetoCompras(); //acá está el error que no llegué a corregir, y que por eso no lee lo de abajo. Gracias
+  creandoObjetoCompras();
   setInterval(() => {
     Swal.fire(
       "Excelente!",
